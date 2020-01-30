@@ -4,7 +4,7 @@ const MaxProductOfThree = {
     // negative numbers makes this tricky because of multiplication rules, e.g. (-5 * -5) = +25
     A = A.sort((a, b) => a-b);
     let len = A.length
-    // compare products of top 3 numbers and bottom 3 numbers (which may be negative)
+    // compare products: top 3 numbers, and top number and bottom 2 numbers (which may be negative)
     let p_pos = A[len-1] * A[len-2] * A[len-3]
     let p_neg = A[len-1] * A[0] * A[1] // a pair of -ve numbers may make a larger product
     return p_pos > p_neg ? p_pos : p_neg
